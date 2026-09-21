@@ -159,6 +159,7 @@ class MainActivity : AppCompatActivity() {
         weekText.text = "This week: %.1f of %.0f units (%d%% of safe limit)".format(
             weekTotal, Calc.WEEKLY_LIMIT_UNITS, pct
         ) + if (pct >= 100) "\nOver the weekly limit" else ""
+        weekText.append("\nSource: UK Chief Medical Officers' low-risk drinking guidelines, 2016 (14 units/week; 1 unit = 10 ml pure alcohol)")
 
         val color = Color.parseColor(
             when {
